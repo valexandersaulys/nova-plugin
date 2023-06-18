@@ -1,6 +1,8 @@
 # Emmet for Nova editor
 
-> Extension development is sponsored by [Panic](https://panic.com)
+Modified version of Panic's official Emmet mode.
+
+This version uses **Ctrl-J** (same as Emacs) to expand text. It helps with "Ctrl-E" being otherwise mapped to "go-to-end-of-line" in MacOS.
 
 Emmet is a web-developer’s toolkit for boosting HTML & CSS code writing.
 
@@ -23,10 +25,10 @@ ul#nav>li.item$*4>a{Item $}
 
 ## Features
 
-* **Familiar syntax**: as a web-developer, you already know how to use Emmet. Abbreviation syntax is similar to CSS Selectors with shortcuts for id, class, custom attributes, element nesting and so on.
-* **Dynamic snippets**: unlike default editor snippets, Emmet abbreviations are dynamic and parsed as-you-type. No need to predefine them for each project, just type `MyComponent>custom-element` to convert any word into a tag.
-* **CSS properties shortcuts**: Emmet provides special syntax for CSS properties with embedded values. For example, `bd1-s#f.5` will be exampled to `border: 1px solid rgba(255, 255, 255, 0.5)`.
-* **Available for most popular syntaxes**: use single abbreviation to produce code for most popular syntaxes like HAML, Pug, JSX, SCSS, SASS etc.
+-   **Familiar syntax**: as a web-developer, you already know how to use Emmet. Abbreviation syntax is similar to CSS Selectors with shortcuts for id, class, custom attributes, element nesting and so on.
+-   **Dynamic snippets**: unlike default editor snippets, Emmet abbreviations are dynamic and parsed as-you-type. No need to predefine them for each project, just type `MyComponent>custom-element` to convert any word into a tag.
+-   **CSS properties shortcuts**: Emmet provides special syntax for CSS properties with embedded values. For example, `bd1-s#f.5` will be exampled to `border: 1px solid rgba(255, 255, 255, 0.5)`.
+-   **Available for most popular syntaxes**: use single abbreviation to produce code for most popular syntaxes like HAML, Pug, JSX, SCSS, SASS etc.
 
 [Read more about Emmet features](https://docs.emmet.io)
 
@@ -38,9 +40,9 @@ In Nova editor, pick Extensions > Extensions Library... menu item then find & in
 
 To expand Emmet abbreviation, type it in editor and run Editor > Emmet > Expand Abbreviation. For example, type `ul.nav>.item*4>a` and hit <kbd>Ctrl-E</kbd>.
 
-Also, abbreviation expander acts as *autocomplete provider* and automatically captures abbreviation as you type.
+Also, abbreviation expander acts as _autocomplete provider_ and automatically captures abbreviation as you type.
 
-When you start typing in *Emmet-supported document* (HTML, XML CSS, etc.) Emmet detects if you’re typing something similar to abbreviation and provides auto-complete item with expanded abbreviation preview. Hit <kbd>Tab</kbd> or <kbd>Enter</kbd> key to expand it, hit <kbd>Esc</kbd> to cancel or use arrow keys to pick another completion item.
+When you start typing in _Emmet-supported document_ (HTML, XML CSS, etc.) Emmet detects if you’re typing something similar to abbreviation and provides auto-complete item with expanded abbreviation preview. Hit <kbd>Tab</kbd> or <kbd>Enter</kbd> key to expand it, hit <kbd>Esc</kbd> to cancel or use arrow keys to pick another completion item.
 
 ![Emmet abbreviation example](./images/emmet1.gif)
 
@@ -54,7 +56,7 @@ If you already have an abbreviation in document and you want to expand it, move 
 
 Writing Emmet abbreviations in JSX is a bit tricky: in most cases you’d expect Tab key to expand native Nova clips or completions and use Emmet for specific context only. So a default abbreviation capturing for every variable or snippet would annoy you.
 
-To solve this problem, Emmet uses *prefixed abbreviations* in JSX: it will capture and expand abbreviation only if it’s prefixed with `<` character:
+To solve this problem, Emmet uses _prefixed abbreviations_ in JSX: it will capture and expand abbreviation only if it’s prefixed with `<` character:
 
 ![Emmet abbreviation example](./images/emmet3.gif)
 
